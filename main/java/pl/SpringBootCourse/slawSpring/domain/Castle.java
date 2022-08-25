@@ -40,7 +40,7 @@ private String name = "East Watch";
 
     @Override
     public String toString(){
-      return  "Castle name: " + this.name + " <-- " + knight;
+      return  this.name + " <-- " + knight;
     }
 }
 
