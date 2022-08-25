@@ -1,12 +1,19 @@
 package pl.SpringBootCourse.slawSpring.domain;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Knight {
+    @Value("lancelot") // tutaj podajemy odnosnik do pliku z application.properties
     private String name;
+    @Value("29")
     private int age;
-//    private Quest quest;
+
+    public Knight() {
+    }
+
+    //    private Quest quest;
 
 //    public Knight(String name, int age, Quest quest) {
 //        this.name = name;
