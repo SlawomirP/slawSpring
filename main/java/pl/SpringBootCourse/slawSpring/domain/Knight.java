@@ -1,5 +1,6 @@
 package pl.SpringBootCourse.slawSpring.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ public class Knight {
     public Knight() {
     }
 
-    //    private Quest quest;
+        private Quest quest;
 
 //    public Knight(String name, int age, Quest quest) {
 //        this.name = name;
@@ -26,12 +27,14 @@ public class Knight {
         this.age = age;
     }
 
-//    public void setQuest(Quest quest) {
-//        this.quest = quest;
-//    }
+    @Autowired
+    public void setQuest(Quest quest) {
+        System.out.println("----------");
+        this.quest = quest;
+    }
 
     @Override
     public String toString() {
-        return "knight name: " + name + " (" + age + ").";
+        return "knight name: " + name + " (" + age + "). Quest: " + this.quest;
     }
 }

@@ -19,10 +19,13 @@ public class Castle {
 @Value("${my.castle.name:DefaultName Castle}")
 private String name = "East Watch";
 
-    @Autowired
+    //@Autowired // wstrzykiwanie bezposrednio do pola
     Knight knight;
 
-    public Castle() {
+    //wstrzykiwanie w konstruktorze, dochodzi adnotacja nad konstruktorem
+    @Autowired
+    public Castle(Knight knight) {
+        this.knight = knight;
     }
 
     @PostConstruct
