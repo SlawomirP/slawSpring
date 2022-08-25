@@ -16,6 +16,8 @@ public class Starter implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        System.out.println(castle);
+
         Quest saveAPrincess = new Quest("Save a princess");
         Knight lancelot = new Knight("Lancelot", 29, saveAPrincess);
         System.out.println(lancelot);
