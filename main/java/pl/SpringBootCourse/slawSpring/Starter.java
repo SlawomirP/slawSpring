@@ -16,7 +16,7 @@ public class Starter implements CommandLineRunner {
         // krok 7 - tu ustawiamy nowy obiekt questa
 
         Quest saveAPrincess = new Quest("Save a princess");
-       // stworzenie nowego obiektu knight 1
+        // stworzenie nowego obiektu knight 1
         Knight lancelot = new Knight("Lancelot", 29, saveAPrincess);
 
         System.out.println(lancelot);
@@ -34,6 +34,5 @@ public class Starter implements CommandLineRunner {
 
         percival2konstruktor.setQuest(killTheDragon);
         System.out.println(percival2konstruktor);
-
     }
 }

@@ -1,4 +1,5 @@
 package pl.SpringBootCourse.slawSpring.domain;
+
 //stworzenie nowej klasy 3
 public class Quest {
 
@@ -9,7 +10,7 @@ public class Quest {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return description;
     }
 }
