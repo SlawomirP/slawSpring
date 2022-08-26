@@ -24,7 +24,7 @@ public class Castle {
         this.knight = knight;
     }
 
-    Castle(String name, Knight knight) {
+    Castle(Knight knight, String name) {
         this.name = name;
         this.knight = knight;
     }
@@ -37,6 +37,10 @@ public class Castle {
 //    @PreDestroy
     public void momentBeforeDeleteBean() {
         System.out.println("------moment before------");
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 
     @Override
