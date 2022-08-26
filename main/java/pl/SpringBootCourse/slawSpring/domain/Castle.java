@@ -16,8 +16,8 @@ public class Castle {
 //    @Value("${my.castle.name}") // nazwa pliku z application.properties
                                 // jezeli tego pliku nie byloby w application properties
                                 // ale mozna napisac wart domyslna
-@Value("${my.castle.name:DefaultName Castle}")
-private String name = "East Watch";
+@Value("${my.castle.name:DefaultName Castle}") // TO ZOSTANIE WZIETE POD UWAGE JEZELI ZASTOSUJEMY WSTRZYKIWANIE
+private String name = "East Watch"; // BEZ WSTRZYKIWANIA ZASOSUJE TA NAZWE
 
     //@Autowired // wstrzykiwanie bezposrednio do pola
     Knight knight;
@@ -25,6 +25,12 @@ private String name = "East Watch";
     //wstrzykiwanie w konstruktorze, dochodzi adnotacja nad konstruktorem
     @Autowired
     public Castle(Knight knight) {
+        this.knight = knight;
+    }
+
+    //TWORZYMY KONSTRUKTOR DO TESTOW BEZ WSTRZYKIWANIA
+    public Castle(String name, Knight knight) {
+        this.name = name;
         this.knight = knight;
     }
 
