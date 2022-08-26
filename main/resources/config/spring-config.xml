@@ -12,7 +12,10 @@
     <constructor-arg index="0" value="lancelot"/>
     <constructor-arg index="1" value="9"/>
     <property name="quest" ref="quest"/>
-
 </bean>
+    <bean id="castle" class="pl.SpringBootCourse.slawSpring.domain.Castle" init-method="momentAfterCreateBean" destroy-method="momentBeforeDeleteBean">
+          <constructor-arg index="0" ref="knight"/>
+    </bean>
+
 
 </beans>
