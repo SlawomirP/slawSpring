@@ -28,8 +28,11 @@ private String name = "East Watch"; // BEZ WSTRZYKIWANIA ZASOSUJE TA NAZWE
         this.knight = knight;
     }
 
-    //TWORZYMY KONSTRUKTOR DO TESTOW BEZ WSTRZYKIWANIA
-    public Castle(String name, Knight knight) {
+    //TWORZYMY KONSTRUKTOR DO TESTOW BEZ WSTRZYKIWANIA, problem jest tu ze konstruktor jest public
+    //i kazdy sobie moze utworzyc obiekt do testow w normalnej klasie, troche pomoze zastosowanie
+    //folderu domain i tam wrzucamy test castle, modyfikator dostepu na domyslny czyli pozbywamy sie
+    //public
+    Castle(String name, Knight knight) {
         this.name = name;
         this.knight = knight;
     }

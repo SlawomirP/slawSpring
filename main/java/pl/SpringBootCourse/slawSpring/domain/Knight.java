@@ -14,6 +14,8 @@ public class Knight {
     public Knight() {
     }
 
+
+
         private Quest quest;
 
 //    public Knight(String name, int age, Quest quest) {

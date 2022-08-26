@@ -1,4 +1,4 @@
-package pl.SpringBootCourse.slawSpring;
+package pl.SpringBootCourse.slawSpring.domain;
 
 import org.junit.jupiter.api.Test;
 import pl.SpringBootCourse.slawSpring.domain.Castle;
@@ -11,7 +11,7 @@ public class CastleTest {
     @Test
     public void castleToStringMessage(){
         Knight knight = new Knight();
-        Castle castle = new Castle(knight);
+        Castle castle = new Castle("slaw castle", knight);
         String except = "slaw castle <-- knight name: lancelot (29). Quest: save a princess";
         assertEquals(except, castle.toString());
     }
