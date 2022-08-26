@@ -10,7 +10,11 @@ public class CastleTest {
 
     @Test
     public void castleToStringMessage(){
+        //brakujace zadanie damy na sztywno
+        Quest quest = new Quest();
         Knight knight = new Knight();
+        //do knighta dodajemy questa metoda wstrzykujaca
+        knight.setQuest(quest);
         Castle castle = new Castle("slaw castle", knight);
         String except = "slaw castle <-- knight name: lancelot (29). Quest: save a princess";
         assertEquals(except, castle.toString());

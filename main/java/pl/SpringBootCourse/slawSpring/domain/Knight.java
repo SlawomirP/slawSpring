@@ -7,15 +7,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Knight {
     @Value("lancelot") // tutaj podajemy odnosnik do pliku z application.properties
-    private String name;
+    private String name = "lancelot";
     @Value("29")
-    private int age;
+    private int age = 29;
 
     public Knight() {
     }
-
-
-
         private Quest quest;
 
 //    public Knight(String name, int age, Quest quest) {
@@ -34,7 +31,6 @@ public class Knight {
         System.out.println("----------");
         this.quest = quest;
     }
-
     @Override
     public String toString() {
         return "knight name: " + name + " (" + age + "). Quest: " + this.quest;

@@ -37,7 +37,4 @@ class SlawSpringApplicationTests {
 	//dlatego budowanie klas musi sie sprowadzac do tego aby mozna bylo wstrzykiwac zaleznosci
 	//przez konstruktor lub metode wstrzykujaca bez uzycia kontekstu springa
 	 // test w nowej klasie CastleTest
-
-
-
 }
