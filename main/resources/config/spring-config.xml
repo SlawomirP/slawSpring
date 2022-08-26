@@ -8,14 +8,19 @@
   http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+<!--    stworzenie beana z klasy quest-->
     <bean id="quest" class="pl.SpringBootCourse.slawSpring.domain.Quest"/>
 
+<!--    stworzenie beana z klasy knight-->
     <bean id="knight" class="pl.SpringBootCourse.slawSpring.domain.Knight">
+<!--        wstrzykniecie prze konstruktor-->
         <constructor-arg index="0" value="lancelot"/>
         <constructor-arg index="1" value="9"/>
+<!--        wstrzykniecie przez metode, musi byc metoda set na polu-->
         <property name="quest" ref="quest"/>
     </bean>
 
+<!--    utworzenie beana z klasy castle i wstrzykniecie zaleznosci plus metody startowe i koncowe-->
     <bean id="castle" class="pl.SpringBootCourse.slawSpring.domain.Castle" init-method="momentAfterCreateBean"
           destroy-method="momentBeforeDeleteBean">
         <constructor-arg index="0" ref="knight"/>

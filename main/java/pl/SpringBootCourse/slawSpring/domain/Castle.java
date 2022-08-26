@@ -16,10 +16,7 @@ public class Castle {
 
     //@Value("${my.castle.name:DefaultName Castle}")
     private String name;
-
     Knight knight;
-
-
     public Castle(Knight knight) {
         this.knight = knight;
     }
