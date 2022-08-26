@@ -8,7 +8,7 @@ import pl.SpringBootCourse.slawSpring.domain.Knight;
 import pl.SpringBootCourse.slawSpring.domain.Quest;
 
 @Configuration //TO OZNACZENIE MOWI ŻE ZNAJDUJĄ SIĘ TU DEFINICJE BEANÓW
-@ImportResource("classpath:config/Castle.properties")
+@ImportResource("classpath:config/castle-config.xml")
 public class MainConfig {
 
 //    DEFINIOWANIE BEANÓW - definiujemy je za pomoca metod zwracajacych danego beana
@@ -23,7 +23,7 @@ public class MainConfig {
     //kolejnym beanem bedzie knight ktoremu wstrzymkujemy wart przez konstruktor
     //plus przez setera
     @Bean
-    public Knight createKnight(){
+    public Knight knight(){ // wczesniej nazwa to createKnight
         Knight knight = new Knight("Lancelot", 29);
         knight.setQuest(createQuest()); // wstrzyknieto beana
         return knight;
@@ -31,7 +31,7 @@ public class MainConfig {
 
     //bean castle ze wzgledu na to ze nazwa znajduje sie pliku
     //musi importowac xml, nad klasa nalezy dodac anotacje @ImportResource
-
+    //bedziemy mieli beana tam zdefiniowanego
 
 
 }
