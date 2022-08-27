@@ -8,35 +8,34 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-//@PropertySource("classpath:Castle.properties")
-//@Component
 
+@Component
 public class Castle {
 
-
-    //@Value("${my.castle.name:DefaultName Castle}")
     private String name;
     Knight knight;
+
     public Castle(Knight knight) {
         this.knight = knight;
     }
 
+    @Autowired
     Castle(Knight knight, String name) {
         this.name = name;
         this.knight = knight;
     }
 
-//    @PostConstruct
+    //    @PostConstruct
     public void momentAfterCreateBean() {
         System.out.println("------moment after------");
     }
 
-//    @PreDestroy
+    //    @PreDestroy
     public void momentBeforeDeleteBean() {
         System.out.println("------moment before------");
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 

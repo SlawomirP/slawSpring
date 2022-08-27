@@ -2,7 +2,7 @@ package pl.SpringBootCourse.slawSpring.ReviveSingleton;
 
 public class PersonUtils {
 
-    PersonUtils instance = null; // tworzymy instacje klasy
+    private static PersonUtils instance = null; // tworzymy instacje klasy
 
     private PersonUtils() { //prywatny konstruktor aby obiekt byl tylko tutaj
     }
