@@ -1,4 +1,10 @@
 package pl.SpringBootCourse.slawSpring.ReviveSingleton;
 
-public class PersonUtils2 {
+public enum PersonUtils2 {
+
+    INSTANCE;
+
+    public final String operationToUpperCase(Person person) {
+        return person.name.toUpperCase();
+    }
 }
