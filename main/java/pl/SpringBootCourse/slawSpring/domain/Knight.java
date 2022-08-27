@@ -23,6 +23,7 @@ public class Knight {
         this.name = name;
         this.age = age;
     }
+
     @Autowired
     public void setQuest(Quest quest) {
         System.out.println("----------");

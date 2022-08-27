@@ -13,8 +13,10 @@ import javax.annotation.PreDestroy;
 public class Castle {
 
     private String name;
+
     Knight knight;
 
+    @Autowired
     public Castle(Knight knight) {
         this.knight = knight;
     }

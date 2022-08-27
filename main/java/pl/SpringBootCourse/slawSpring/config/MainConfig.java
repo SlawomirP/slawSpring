@@ -15,26 +15,34 @@ import pl.SpringBootCourse.slawSpring.domain.Quest;
 @PropertySource("classpath:Castle.properties")
 public class MainConfig {
 
-    @Bean
-    public Quest createQuest() {
-        return new Quest();
-    }
 
 
-    @Bean
-    public Knight knight() { // wczesniej nazwa to createKnight
-        Knight knight = new Knight("Lancelot", 29);
-        knight.setQuest(createQuest()); // wstrzyknieto beana
-        return knight;
-    }
 
-    @Bean(name = "zamek", initMethod = "momentAfterBeanCreate", destroyMethod = "momentBeforeDeleteBean")
-    @Value("${my.castle.name:slaw castle}")
-    public Castle castle(String name) {
-        Castle castle = new Castle(knight());
-        //ustawienie name, metoda wstrzykujaca
-        castle.setName(name);
-        return castle;
-    }
+
+
+
+
+//
+//    @Bean
+//    public Quest createQuest() {
+//        return new Quest();
+//    }
+//
+//
+//    @Bean
+//    public Knight knight() { // wczesniej nazwa to createKnight
+//        Knight knight = new Knight("Lancelot", 29);
+//        knight.setQuest(createQuest()); // wstrzyknieto beana
+//        return knight;
+//    }
+//
+//    @Bean(name = "zamek", initMethod = "momentAfterBeanCreate", destroyMethod = "momentBeforeDeleteBean")
+//    @Value("${my.castle.name:slaw castle}")
+//    public Castle castle(String name) {
+//        Castle castle = new Castle(knight());
+//        //ustawienie name, metoda wstrzykujaca
+//        castle.setName(name);
+//        return castle;
+//    }
 
 }
